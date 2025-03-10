@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-70873.htm" />
+    <title>vue实现列表垂直无缝滚动_vue.js</title>
+        <meta name="description" content="本文实例为大家分享了vue实现列表垂直无缝滚动的具体代码，供大家参考，具体内容如下 实现新闻列表的轮播（如下图）  上代码 封装的so-marquee.vue  &lt;template&gt;   " />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-70873.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="vue实现列表垂直无缝滚动_vue.js" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/a330da1ce4fd5c23ed2ad873111da36f.webp" />
+        <meta property="og:release_date" content="2025-03-10T04:36:28" />
+    <meta property="og:updated_time" content="2025-03-10T04:36:28" />
+        <meta property="og:description" content="本文实例为大家分享了vue实现列表垂直无缝滚动的具体代码，供大家参考，具体内容如下 实现新闻列表的轮播（如下图）  上代码 封装的so-marquee.vue  &lt;template&gt;   " />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue实现列表垂直无缝滚动_vue.js">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>vue实现列表垂直无缝滚动_vue.js</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p>本文实例为大家分享了vue实现列表垂直无缝滚动的具体代码，供大家参考，具体内容如下</p> <p>实现新闻列表的轮播（如下图）</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220424/28d8ecd747e8baee93c4a559dab2e466.jpg"></p> <p>上代码</p> <p><strong>封装的so-marquee.vue</strong></p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;      &lt;div          class="marquee-wrapper"          :style="{ width: realWidth + 'px' }"      &gt;          &lt;div              class="marquee-container"              :style="{ height: realHeight + 'px' }"              :class="className"          &gt;              &lt;ul                  ref="marqueeCon"                  :id="tooltipId"                  class="marquee-content"                  :class="{ anim: animate === true}"                  @mouseenter="handleStop()"                  @mouseleave="handleUp()"              &gt;                  &lt;li                      v-for="(item,index) in realData"                      :key="`${tooltipId}-${item.id}-${index}`"                      class="marquee-item"                      :style="{ height: itemHeigth + 'px' }"                      @click="handleClick(item)"                  &gt;                      &lt;slot name="itemCon" :item="item"&gt;&lt;/slot&gt;                  &lt;/li&gt;              &lt;/ul&gt;          &lt;/div&gt;      &lt;/div&gt;  &lt;/template&gt;  &lt;script&gt;  import { parseToNum, generateId } from '@/utils/util'    export default {      name: "so-marquee",      props: {          /*          * 可接受传参          * data          列表数据          * className     自定义类名          * width         列表宽度，默认值：400          * height        列表高度,默认值：200          * showNumber    可视的条目数，默认值：5          * speed         轮播速度，默认值：1000          * */          //列表数据          data: {              type: Array,              default: () =&gt; [],          },          //自定义类名          className: String,          //列表宽度，默认值：400          width: {              type: [Number, String],              default: 400          },          //列表高度,默认值：200          height: {              type: [Number, String],              default: 200          },          //可视的条目数，默认值：5          showNumber: {              type: [Number, String],              default: 5          },          //轮播速度，默认值：1000          speed: {              type: [Number, String],              default: 1000          }      },      data() {          return {              intnum: undefined,              animate: false          };      },      computed: {          tooltipId() {              return `marquee-con-${ generateId() }`;          },          realWidth() {              return parseToNum(this.width)          },          realHeight() {              return parseToNum(this.height)          },          realShowNumber() {              return parseToNum(this.showNumber)          },          realSpeed() {              return parseToNum(this.speed) &lt; 1000 ? 1000 : parseToNum(this.speed)          },          itemHeigth() {              return this.realHeight / this.realShowNumber          },          realData() {              return JSON.parse(JSON.stringify(this.data))          }      },      mounted() {          if (this.realData.length &gt; this.realShowNumber) {              this.scrollUp();          }      },      methods: {          scrollUp() {              // eslint-disable-next-line no-unused-vars              this.intnum = setInterval(_ =&gt; {                  this.animate = true;                  setTimeout(() =&gt; {                      this.realData.push(this.realData[0]);   // 将数组的第一个元素添加到数组的                      this.realData.shift();               //删除数组的第一个元素                      this.animate = false;           // margin-top 为0 的时候取消过渡动画，实现无缝滚动                  }, this.realSpeed / 2)                  this.$once('hook:beforeDestroy', () =&gt; {                      this.cleanup()                  })              }, this.realSpeed);          },          handleStop() {              this.cleanup()          },          handleUp() {              this.scrollUp();          },          handleClick(row) {              this.$emit('handleClick', row)          },          cleanup() {              if (this.intnum) {                  clearInterval(this.intnum);                  this.intnum = null;              }          }      },      beforeDestroy() {          this.cleanup();      },      deactivated() {          this.cleanup();      },      watch: {          animate(flag) {              this.marqueeCon = this.$refs.marqueeCon              if (flag) {                  this.marqueeCon.style.marginTop = `-${ this.itemHeigth }px`              } else {                  this.marqueeCon.style.marginTop = 0              }          },      }  };  &lt;/script&gt;  &lt;style scoped lang="scss"&gt;      .marquee-container {          overflow: hidden;      }        .marquee-content {          position: relative;      }        .anim {          transition: all 0.5s;      }        .marquee-item {          display: flex;          align-items: center;          justify-content: space-around;      }  &lt;/style&gt;</pre> </div> <p><strong>parseToNum方法</strong></p> <div class="ay1code"> <pre class="brush:js;">export function parseToNum(value) {      if (value !== undefined) {          value = parseInt(value, 10)          if (isNaN(value)) {              value = null;          }      }      return value  }</pre> </div> <p><strong>generateId 方法</strong></p> <div class="ay1code"> <pre class="brush:js;">export const generateId = function() {      return Math.floor(Math.random() * 10000);  };</pre> </div> <p><strong>父组件调用</strong></p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;      &lt;div id="app"&gt;          &lt;so-marquee              :data="jsonData"              :height="200"              :showNumber="4"              :speed="500"              class="my-ui-marquee"              @handleClick="handleMarqueeClick"          &gt;              &lt;template v-slot:itemCon="{item}"&gt;                  &lt;div&gt;{{ item.id }}&lt;/div&gt;                  &lt;div&gt;{{ item.name }}&lt;/div&gt;                  &lt;div&gt;{{ item.date }}&lt;/div&gt;              &lt;/template&gt;          &lt;/so-marquee&gt;      &lt;/div&gt;  &lt;/template&gt;    &lt;script&gt;  import soMarquee from './components/so-marquee'    export default {      name: 'App',      data() {          return {              jsonData: [                  {                      id: 1,                      name: "开会通知",                      date: "2020-02-01"                  },                  {                      id: 2,                      name: "放假通知",                      date: "2020-02-02"                  },                  {                      id: 3,                      name: "停水通知",                      date: "2020-02-03"                  },                  {                      id: 4,                      name: "停电通知",                      date: "2020-02-04"                  },                  {                      id: 5,                      name: "停车通知",                      date: "2020-02-05"                  },                  {                      id: 6,                      name: "奖励通知",                      date: "2020-02-06"                  },                  {                      id: 7,                      name: "处分通知",                      date: "2020-02-07"                  },                  {                      id: 8,                      name: "处分8通知",                      date: "2020-02-08"                  },                  {                      id: 9,                      name: "处分9通知",                      date: "2020-02-09"                  },                  {                      id: 10,                      name: "处分10通知",                      date: "2020-02-10"                  },              ]          }      },      components: {          soMarquee      },      methods: {          handleMarqueeClick(row) {              alert(`当前点击的第${row.id}行`)          }      }  }  &lt;/script&gt;    &lt;style scoped lang="scss"&gt;  .my-ui-marquee {      ::v-deep.marquee-item {          cursor: pointer;      }  }  &lt;/style&gt;</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-70243.htm">动物医院科室分类 动物医院科室分类标准</a></p>
+                                        <p>下一个：<a href="/news/article-70874.htm">天津市天宠宠物医院（天津宠物医院收费价目表）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-70873.htm" title="vue实现列表垂直无缝滚动_vue.js">vue实现列表垂直无缝滚动_vue.js</a></li>
+                        <li class="py-2"><a href="/news/article-69971.htm" title="Spring Boot 分层构建 Docker 镜像实战">Spring Boot 分层构建 Docker 镜像实战</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-free-node-subscribe.htm" title="VPN翻墙免费 | 3月10日22.3M/S|免费V2ray/Shadowrocket/SSR/Clash订阅节点分享">VPN翻墙免费 | 3月10日22.3M/S|免费V2ray/Shadowrocket/SSR/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-70242.htm" title="颗粒机制作狗粮视频教程（狗粮颗粒机器价格）">颗粒机制作狗粮视频教程（狗粮颗粒机器价格）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-free-node-subscribe.htm" title="VPN翻墙免费 | 3月9日22.1M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享">VPN翻墙免费 | 3月9日22.1M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-70874.htm" title="天津市天宠宠物医院（天津宠物医院收费价目表）">天津市天宠宠物医院（天津宠物医院收费价目表）</a></li>
+                        <li class="py-2"><a href="/news/article-70243.htm" title="动物医院科室分类 动物医院科室分类标准">动物医院科室分类 动物医院科室分类标准</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-node-share.htm" title="VPN翻墙免费 | 3月8日20.9M/S|免费SSR/Shadowrocket/V2ray/Clash订阅节点分享">VPN翻墙免费 | 3月8日20.9M/S|免费SSR/Shadowrocket/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-69972.htm" title="适合新手开的店铺（新手开店适合开什么网店）">适合新手开的店铺（新手开店适合开什么网店）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
