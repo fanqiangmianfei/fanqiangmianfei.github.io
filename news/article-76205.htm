@@ -2,20 +2,20 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-74187.htm" />
-    <title>Vue前端js循环遍历数组八种方法总结最新</title>
-        <meta name="description" content="前五种常用，第三种个人觉得常用最多，自己复制代码打印试试 var arr = [1, 2, 3, 4, 5, 6];      // 第一种   for循环遍历     var newArr = []" />
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-76205.htm" />
+    <title>vue如何实现Toast轻提示_vue.js_</title>
+        <meta name="description" content="目录  vue实现Toast轻提示  首先创建一个toast组件 在js文件中引入组件 在入口文件中引入上面这个js文件 下面就可以在view里全局使用了  使用vant的Toast轻提示报错  文档" />
         <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-74187.htm" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-76205.htm" />
     <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
-    <meta property="og:title" content="Vue前端js循环遍历数组八种方法总结最新" />
-    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/97cb5a0fdb27dc4f8c4a5a08a791abe4.webp" />
-        <meta property="og:release_date" content="2025-03-15T07:19:45" />
-    <meta property="og:updated_time" content="2025-03-15T07:19:45" />
-        <meta property="og:description" content="前五种常用，第三种个人觉得常用最多，自己复制代码打印试试 var arr = [1, 2, 3, 4, 5, 6];      // 第一种   for循环遍历     var newArr = []" />
+    <meta property="og:title" content="vue如何实现Toast轻提示_vue.js_" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/9494be7a1d2cc768ff53284db6bda927.webp" />
+        <meta property="og:release_date" content="2025-03-18T06:12:20" />
+    <meta property="og:updated_time" content="2025-03-18T06:12:20" />
+        <meta property="og:description" content="目录  vue实现Toast轻提示  首先创建一个toast组件 在js文件中引入组件 在入口文件中引入上面这个js文件 下面就可以在view里全局使用了  使用vant的Toast轻提示报错  文档" />
         
     <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!--theme-style-->
@@ -31,7 +31,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Vue前端js循环遍历数组八种方法总结最新">
+    <meta name="apple-mobile-web-app-title" content="vue如何实现Toast轻提示_vue.js_">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -85,7 +85,7 @@
         <a class="navicon" href="#menu-left"> </a>
         <div class="container">
             <div class="header-matter">
-                <h1>Vue前端js循环遍历数组八种方法总结最新</h1>
+                <h1>vue如何实现Toast轻提示_vue.js_</h1>
                 <p>
                     <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
                 </p>
@@ -119,10 +119,10 @@
                 <div class="row">
                     <div class="col-md-9">
                                         <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
-                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p><strong>前五种常用，第三种个人觉得常用最多，自己复制代码打印试试</strong></p> <pre><code>var arr = [1, 2, 3, 4, 5, 6];      // 第一种   for循环遍历     var newArr = [];     for(var i = 0; i &lt; arr.length; i++){       newArr.push(arr[i])       console.log(newArr)     }      // 第二种 es6语法  arr.forEach()遍历     var newArr = [];     arr.forEach((item) =&gt; {       newArr.push(arr[item])       console.log(newArr)     })      // 第三种   Object.keys()遍历     // (个人推荐比较好用：枚举方法)   (返回一个数组,包括对象自身的(不含继承的)所有可枚举属性(不含Symbol属性).)     var newArr = [];     Object.keys(arr).forEach((item) =&gt; {       newArr.push(arr[item])       console.log(newArr)     })        // 第四种   arr.map(function callback(currentValue[, index[, array]]) 或者这样 array.map(item,index,arr)      // currentValue: callback一系列中正在处理的当前元素 index: callback一系列中正在处理的当前元素的索引。array:  map 调用方法的目录     var newArr = []     arr.map((item) =&gt; {       newArr.push(arr[item])       console.log(newArr)     })      // 第五种   for...in...遍历     //  循环遍历对象自身的和继承的可枚举属性(循环遍历对象自身的和继承的可枚举属性(不含Symbol属性).).     var newArr = []     for(var i in arr ) {       newArr.push(arr[i])       console.log(newArr,'1111111')     }      // 第六种   for-of遍历     //不仅支持数组,还支持大多数类数组对象,例如DOM NodeList对象.     //也支持字符串遍历,它将字符串视为一系列的Unicode字符来进行遍历.     var newArr = []     for(var i of arr){       newArr.push(arr[i])       console.log(newArr)     }      // 第七种   Object.getOwnPropertyNames(obj) 遍历     //  返回一个数组,包含对象自身的所有属性(不含Symbol属性,但是包括不可枚举属性).     var newArr = [];     Object.getOwnPropertyNames(arr).forEach((item) =&gt; {       newArr.push(arr[item])       console.log(newArr,'!!!!')     })      // 第八种   Reflect.ownKeys(obj)遍历       // 返回一个数组,包含对象自身的所有属性,不管属性名是Symbol或字符串,也不管是否可枚举.     var newArr = [];     Reflect.ownKeys(arr).forEach((item) =&gt; {       newArr.push(arr[item])       console.log(newArr)        //  数组可以全部打印出来特别！！！！     })</code></pre> </div> 			                <div class="clearfix"></div>
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">vue实现Toast轻提示</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_0_0" rel="nofollow">首先创建一个toast组件</a></li> <li><a href="#_lab2_0_1" rel="nofollow">在js文件中引入组件</a></li> <li><a href="#_lab2_0_2" rel="nofollow">在入口文件中引入上面这个js文件</a></li> <li><a href="#_lab2_0_3" rel="nofollow">下面就可以在view里全局使用了</a></li> </ul> <li><a href="#_label1" rel="nofollow">使用vant的Toast轻提示报错</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_4" rel="nofollow">文档中是这样写的</a></li> <li><a href="#_lab2_1_5" rel="nofollow">实际使用是这样写</a></li> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>vue实现Toast轻提示</h2> <p class="maodian"><a name="_lab2_0_0" rel="nofollow"></a></p> <h3>首先创建一个toast组件</h3> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;    &lt;div class="context" v-show="isshow"&gt;      &lt;span class="tip"&gt;{{ text }}&lt;/span&gt;    &lt;/div&gt;  &lt;/template&gt;</pre> </div> <div class="ay1code"> <pre class="brush:js;">&lt;script&gt;  export default {    name: "Toast",    props: {      isshow: {        type: Boolean,      },      text: {        type: String,      },    },    watch: {      isshow(val) {        if (val === true) {          setTimeout(() =&gt; {            this.isshow = false;          }, 3000);        }      },    },  };</pre> </div> <div class="ay1code"> <pre class="brush:css;">&lt;/script&gt;  &lt;style lang="less" scoped&gt;  .context {    position: absolute;    top: 0;    width: 100%;    height: 100%;    z-index: 100;    display: flex;    justify-content: center;    align-items: center;    .tip {      background-color: rgba(40, 40, 40, 0.8);      color: aliceblue;      font-size: 0.6rem;      padding: 0.2rem;      border-radius: 0.1rem;    }  }  &lt;/style&gt;</pre> </div> <p class="maodian"><a name="_lab2_0_1" rel="nofollow"></a></p> <h3>在js文件中引入组件</h3> <div class="ay1code"> <pre class="brush:js;">import Toast from "./Toast.vue";  let NewToast = {    install: function (Vue) {      //创建vue插件，官方地址https://cn.vuejs.org/v2/guide/plugins.html      let newToast = Vue.extend(Toast); //创建vue构造器,官方地址https://cn.vuejs.org/v2/api/#Vue-extend      let toast = new newToast(); //创建实例      document.body.appendChild(toast.$mount().$el); //挂载      Vue.prototype.$Toast = function (text) {        toast.isshow = true; // 传入props        toast.text = text; // 传入props      };    },  };  export { NewToast };</pre> </div> <p class="maodian"><a name="_lab2_0_2" rel="nofollow"></a></p> <h3>在入口文件中引入上面这个js文件</h3> <div class="ay1code"> <pre class="brush:js;">import { NewToast } from "@/components/index.js";  Vue.use(NewToast);</pre> </div> <p class="maodian"><a name="_lab2_0_3" rel="nofollow"></a></p> <h3>下面就可以在view里全局使用了</h3> <div class="ay1code"> <pre class="brush:js;">but() {      this.$Toast("Are you ok ?");  },</pre> </div> <p>效果图</p> <p style="text-align:center"><img decoding="async" alt="在这里插入图片描述" src="http://img.555519.xyz/uploads3/20220416/e5052c4b22b1de50bbf9743e2537c401.jpg"></p> <p>这样一个简单的轻提示就好了，觉得样式丑的话，可以自己调一下。</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>使用vant的Toast轻提示报错</h2> <p>记录一下今天使用vant中的Toast 轻提示，按照官方文档中的方法去使用发现报错使用不了。</p> <p class="maodian"><a name="_lab2_1_4" rel="nofollow"></a></p> <h3>文档中是这样写的</h3> <div class="ay1code"> <pre class="brush:js;">Toast.success('成功文案');  Toast.fail('失败文案');</pre> </div> <p>main.js中引用vant后直接调用Toast报错。</p> <p class="maodian"><a name="_lab2_1_5" rel="nofollow"></a></p> <h3>实际使用是这样写</h3> <div class="ay1code"> <pre class="brush:js;">this.$toast.success("成功文案");  this.$toast.fail("失败文案");</pre> </div> <p>和调用路由一样需要this点出来。</p> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-73526.htm">宠物领养协议书模板图片高清 宠物领养协议书模板图片高清版</a></p>
-                                        <p>下一个：<a href="/news/article-74188.htm">哪里有免费领养的猫（哪里可以免费领养小猫）</a></p>
+                                        <p>上一个：<a href="/news/article-75541.htm">养布偶挣钱吗（养布偶一年能赚多少钱）</a></p>
+                                        <p>下一个：<a href="/news/article-76206.htm">宠物疫苗妙三多（宠物疫苗妙三多猫三联那个好）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -132,16 +132,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-72866.htm" title="抖音领养宠物是真的吗（抖音领养宠物是真的吗还是假的）">抖音领养宠物是真的吗（抖音领养宠物是真的吗还是假的）</a></li>
-                        <li class="py-2"><a href="/news/article-71541.htm" title="如何给新开的宠物店宣传（新开宠物店宣传语）">如何给新开的宠物店宣传（新开宠物店宣传语）</a></li>
-                        <li class="py-2"><a href="/news/article-75540.htm" title="猫咪三针疫苗叫什么名字啊（猫咪三针疫苗叫什么名字啊图片）">猫咪三针疫苗叫什么名字啊（猫咪三针疫苗叫什么名字啊图片）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-node-subscribe-links.htm" title="VPN翻墙免费 | 3月13日21.8M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享">VPN翻墙免费 | 3月13日21.8M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-15-clash-v2ray-ss-ssr.htm" title="VPN翻墙免费 | 3月15日19.2M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享">VPN翻墙免费 | 3月15日19.2M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享</a></li>
-                        <li class="py-2"><a href="/news/article-75541.htm" title="养布偶挣钱吗（养布偶一年能赚多少钱）">养布偶挣钱吗（养布偶一年能赚多少钱）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-14-free-node-subscribe.htm" title="VPN翻墙免费 | 3月14日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享">VPN翻墙免费 | 3月14日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享</a></li>
                         <li class="py-2"><a href="/news/article-69972.htm" title="适合新手开的店铺（新手开店适合开什么网店）">适合新手开的店铺（新手开店适合开什么网店）</a></li>
+                        <li class="py-2"><a href="/news/article-74188.htm" title="哪里有免费领养的猫（哪里可以免费领养小猫）">哪里有免费领养的猫（哪里可以免费领养小猫）</a></li>
+                        <li class="py-2"><a href="/news/article-74865.htm" title="厦门领养宠物 厦门领养宠物中心">厦门领养宠物 厦门领养宠物中心</a></li>
+                        <li class="py-2"><a href="/news/article-71541.htm" title="如何给新开的宠物店宣传（新开宠物店宣传语）">如何给新开的宠物店宣传（新开宠物店宣传语）</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-3-11-free-v2ray-subscribe.htm" title="VPN翻墙免费 | 3月11日21.3M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享">VPN翻墙免费 | 3月11日21.3M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-16-node-share-links.htm" title="VPN翻墙免费 | 3月16日18.6M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">VPN翻墙免费 | 3月16日18.6M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-75540.htm" title="猫咪三针疫苗叫什么名字啊（猫咪三针疫苗叫什么名字啊图片）">猫咪三针疫苗叫什么名字啊（猫咪三针疫苗叫什么名字啊图片）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-free-node-subscribe-links.htm" title="VPN翻墙免费 | 3月17日19.1M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享">VPN翻墙免费 | 3月17日19.1M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-clash-v2ray-ss-ssr.htm" title="VPN翻墙免费 | 3月15日19.2M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享">VPN翻墙免费 | 3月15日19.2M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-71542.htm" title="2021公务员国考报名时间入口 2021公务员国考报名时间入口查询">2021公务员国考报名时间入口 2021公务员国考报名时间入口查询</a></li>
+                        <li class="py-2"><a href="/news/article-75541.htm" title="养布偶挣钱吗（养布偶一年能赚多少钱）">养布偶挣钱吗（养布偶一年能赚多少钱）</a></li>
                     </ul>
     </div>
 </div>
@@ -153,7 +153,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
             </li>
                     </ul>
     </div>
