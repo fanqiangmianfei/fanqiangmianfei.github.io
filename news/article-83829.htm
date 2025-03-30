@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-83829.htm" />
+    <title>ubuntu 14.04 ndk 编译 openssl</title>
+        <meta name="description" content="概述 因工作上需要用到openssl，本文剪短描述ubuntu编译生成openssl，主要的命令参考网上，结合自己的实际使用版本 openssl:1.1.1g ubuntu:14.04 ndk:16b" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-83829.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="ubuntu 14.04 ndk 编译 openssl" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/00bc7e588282edd10e09dc49b82b0a26.webp" />
+        <meta property="og:release_date" content="2025-03-29T09:00:03" />
+    <meta property="og:updated_time" content="2025-03-29T09:00:03" />
+        <meta property="og:description" content="概述 因工作上需要用到openssl，本文剪短描述ubuntu编译生成openssl，主要的命令参考网上，结合自己的实际使用版本 openssl:1.1.1g ubuntu:14.04 ndk:16b" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ubuntu 14.04 ndk 编译 openssl">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>ubuntu 14.04 ndk 编译 openssl</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p><strong>概述</strong><br /> 因工作上需要用到openssl，本文剪短描述ubuntu编译生成openssl，主要的命令参考网上，结合自己的实际使用<br /><strong>版本</strong><br /> openssl:1.1.1g<br /> ubuntu:14.04<br /> ndk:16b<br /><strong>准备</strong><br /> 下载openssl:http://distfiles.macports.org/openssl/openssl-1.1.1g.tar.gz<br /> openssl源码解压放在目录：/work1/SourceCode/openssl-1.1.1g<br /> 下载ndk:https://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip<br /> ndk放在目录：/home/shenweihong/Android/Ndk/android-ndk-r16b</p> <p><em>注意</em>：<br /> 本人之前用<br /> android-ndk-r21b android-ndk-r18b<br /> 编译均报错，很难解决。<br /> 最后试了android-ndk-r16b才编译成功。<br /> 本人后来编译openssl版本1.0.1j，用android-ndk-r16b编译报错，用android-ndk-r14b才成功。<br /><strong>环境变量</strong><br /> ubuntu命令：<br /> export PATH=/home/shenweihong/Android/Ndk/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$PATH<br /> export ANDROID_NDK_HOME=/home/shenweihong/Android/Ndk/android-ndk-r16b/<br /><strong>配置</strong><br /> ./Configure android-arm -D__ANDROID_API__=24 no-threads no-shared --prefix=/work1/SourceCode/opensslLib<br /> no-shared：表示编译结果为静态库，如果想编译结果动态库，就不要这一参数；<br /> –prefix=/work1/SourceCode/opensslLib：表示最终编译结果保存的路径；</p> <p>如下结果即表示配置成功：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221113/aab13de47b7a8566a90875a1722c6e9a.jpg" alt="ubuntu 14.04 ndk 编译 openssl"><br /><strong>编译生成</strong><br /> 命令：<br /> make<br /> make install</p> <p><strong>Android.mk文件</strong></p> <p>LOCAL_PATH := $(call my-dir)</p> <p>#APP_ABI := armeabi armeabi-v7a<br /> APP_PLATFORM := android-24</p> <p>include $(CLEAR_VARS)<br /> LOCAL_LDLIBS := -llog<br /> LOCAL_MODULE := ExchangePosJNI<br /> LOCAL_SRC_FILES := ExchangePosJNI.c</p> <p>include $(BUILD_SHARED_LIBRARY)</p> <p>include $(CLEAR_VARS)<br /> LOCAL_MODULE := libcrypto<br /> LOCAL_SRC_FILES := $(LOCAL_PATH)/lib/libcrypto.a<br /> include $(PREBUILT_STATIC_LIBRARY)</p> <p>include $(CLEAR_VARS)<br /> LOCAL_MODULE := libssl<br /> LOCAL_SRC_FILES := $(LOCAL_PATH)/lib/libssl.a<br /> include $(PREBUILT_STATIC_LIBRARY)</p> <p>include $(CLEAR_VARS)<br /> LOCAL_C_INCLUDES := $(LOCAL_PATH)/include $(LOCAL_PATH)/lib<br /> LOCAL_LDLIBS := -lm -lz -llog -fPIE -ldl<br /> LOCAL_CFLAGS += -fPIE -D__ANDROID_API__=24<br /> LOCAL_STATIC_LIBRARIES := libssl libcrypto<br /> LOCAL_MODULE := OpensslClient<br /> LOCAL_SRC_FILES := OpensslClient.c SSLClient.cpp</p> <p>include $(BUILD_SHARED_LIBRARY)</p> <p>在Windows NDK，使用一样的NDK版本，即android-ndk-r16，编译报错：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221113/c55b5551ef99632b78da7cc081446512.jpg" alt="ubuntu 14.04 ndk 编译 openssl"><br /> 将应用，build.gradle中 minSdkVersion 15改成 minSdkVersion 24才通过，其他地方解释说这个宏定义在NDK不同版本中差异造成的。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-83112.htm">领养宠物协议有法律效力吗怎么写（领养宠物协议有法律效力吗怎么写的）</a></p>
+                                        <p>下一个：<a href="/news/article-83830.htm">中国兽药电商网下载（中国兽药商城）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-72203.htm" title="天津宠物寄养多少钱一天（天津宠物寄养服务价格）">天津宠物寄养多少钱一天（天津宠物寄养服务价格）</a></li>
+                        <li class="py-2"><a href="/news/article-69972.htm" title="适合新手开的店铺（新手开店适合开什么网店）">适合新手开的店铺（新手开店适合开什么网店）</a></li>
+                        <li class="py-2"><a href="/news/article-70242.htm" title="颗粒机制作狗粮视频教程（狗粮颗粒机器价格）">颗粒机制作狗粮视频教程（狗粮颗粒机器价格）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-clash-v2ray-ss-ssr.htm" title="VPN翻墙免费 | 3月25日20.6M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点分享">VPN翻墙免费 | 3月25日20.6M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-72202.htm" title="如何给动物注射（怎么给动物注射药物）">如何给动物注射（怎么给动物注射药物）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-node-share-links.htm" title="VPN翻墙免费 | 3月24日18.9M/S|免费SSR/Shadowrocket/V2ray/Clash订阅节点分享">VPN翻墙免费 | 3月24日18.9M/S|免费SSR/Shadowrocket/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-clash-v2ray-ss-ssr.htm" title="VPN翻墙免费 | 3月28日21.9M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点分享">VPN翻墙免费 | 3月28日21.9M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-11-free-v2ray-subscribe.htm" title="VPN翻墙免费 | 3月11日21.3M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享">VPN翻墙免费 | 3月11日21.3M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-80300.htm" title="动物诊疗许可证申领条件有哪些要求（动物诊疗许可证申领准备材料）">动物诊疗许可证申领条件有哪些要求（动物诊疗许可证申领准备材料）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-free-node-subscribe.htm" title="VPN翻墙免费 | 3月14日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享">VPN翻墙免费 | 3月14日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
