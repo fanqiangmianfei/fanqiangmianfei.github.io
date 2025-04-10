@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-92558.htm" />
+    <title>Spring Security 一键接入验证码登录和小程序登录</title>
+        <meta name="description" content="最近实现了一个多端登录的Spring Security组件，用起来非常丝滑，开箱即用，可插拔，而且灵活性非常强。我觉得能满足大部分场景的需要。目前完成了手机号验证码和微信小程序两种自定义登录，加上默认" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-92558.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="Spring Security 一键接入验证码登录和小程序登录" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/36749d9a49d97b688b5017abac5b10bb.webp" />
+        <meta property="og:release_date" content="2025-04-10T08:16:56" />
+    <meta property="og:updated_time" content="2025-04-10T08:16:56" />
+        <meta property="og:description" content="最近实现了一个多端登录的Spring Security组件，用起来非常丝滑，开箱即用，可插拔，而且灵活性非常强。我觉得能满足大部分场景的需要。目前完成了手机号验证码和微信小程序两种自定义登录，加上默认" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring Security 一键接入验证码登录和小程序登录">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>Spring Security 一键接入验证码登录和小程序登录</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p>最近实现了一个多端登录的<strong>Spring Security</strong>组件，用起来非常丝滑，开箱即用，可插拔，而且灵活性非常强。我觉得能满足大部分场景的需要。目前完成了手机号验证码和微信小程序两种自定义登录，加上默认的Form登录，一共三种，现在开源分享给大家，接下来简单介绍一下这个插件包。</p> <h3 id="dsl配置风格">DSL配置风格</h3> <p>切入正题，先来看看配置：</p> <pre><code class="language-java">    @Bean     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {         http.csrf().disable()                 .authorizeRequests()                 .mvcMatchers("/foo/**")                 .access("hasAuthority('ROLE_USER')").anyRequest().authenticated()                 .and()                 // 默认form表单登录                 .formLogin()                 .and()                 .apply(new LoginFilterSecurityConfigurer&lt;&gt;())                 // 验证码登录                 .captchaLogin(captchaLoginConfigurer -&gt;                                 // 验证码校验 1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                 captchaLoginConfigurer.captchaService(this::verifyCaptchaMock)                                         // 根据手机号查询用户UserDetials  1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                         .captchaUserDetailsService(this::loadUserByPhoneMock)                                         // 生成JWT 返回  1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                         .jwtTokenGenerator(this::tokenResponseMock)                         //todo 其它配置省略……                 )                 // 小程序登录 同时支持多个小程序                 .miniAppLogin(miniAppLoginConfigurer -&gt; miniAppLoginConfigurer                                 // 实现小程序多租户                                 // 根据请求携带的clientid 查询小程序的appid和secret 1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                 .miniAppClientService(this::miniAppClientMock)                                 // 小程序用户 自动注册和检索  1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                 .miniAppUserDetailsService(new MiniAppUserDetailsServiceMock())                                 // 小程序sessionkey缓存 过期时间应该小于微信官方文档的声明   1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                 .miniAppSessionKeyCache(new MiniAppSessionKeyCacheMock())                                 // 生成JWT 返回  1 在此处配置 优先级最高 2 注册为Spring Bean 可以免配置                                 .jwtTokenGenerator(this::tokenResponseMock)                         //todo 其它配置省略……                 );          return http.build();     }</code></pre> <p>这种风格完全贴合了<strong>Spring Security</strong>的<strong>DSL</strong>配置风格，不仅仅高大上，而且可以按需配置。如果你没有验证码登录直接删掉<code>captchaLogin</code>方法；如果你没有微信小程序登录直接删掉<code>miniAppLogin</code>方法。甚至还可以对单种登录进行细粒度定制化，<code>formLogin</code>有的功能基本验证码登录和微信小程序登录的都有。</p> <h3 id="为什么这么灵活">为什么这么灵活？</h3> <p>这里抽象了一个登录配置类：</p> <pre><code class="language-java">&nbsp;public abstract class AbstractLoginFilterConfigurer&lt;H extends HttpSecurityBuilder&lt;H&gt;,  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C extends AbstractLoginFilterConfigurer&lt;H, C, F&gt;,  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;F extends AbstractAuthenticationProcessingFilter&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;extends AbstractHttpConfigurer&lt;AbstractLoginFilterConfigurer&lt;H, C, F&gt;, H&gt; { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 省略…… &nbsp; &nbsp; &nbsp; &nbsp;  }</code></pre> <p>所有额外的登录渠道大都可以通过这个类来扩展，负责验证码登录的<code>CaptchaLoginFilterConfigurer</code>和微信小程序登录的<code>MiniAppLoginFilterConfigurer</code>都是该类实现的，基本上你看了源码也能照葫芦画瓢来一个。</p> <p>另外上面这些配置项接口，都可以放在<strong>Spring IoC</strong>中，配置类能自动获取，不过优先级最高的还是通过上面代码中配置的具体实现，原理参见下面的的样例：</p> <pre><code class="language-java">&nbsp; @Override &nbsp; &nbsp; &nbsp;protected AuthenticationSuccessHandler defaultSuccessHandler(H http) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 如果配置类没有配置 就尝试去Spring IoC中发现 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (this.jwtTokenGenerator == null) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ApplicationContext applicationContext = http.getSharedObject(ApplicationContext.class); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;jwtTokenGenerator = getBeanOrNull(applicationContext, JwtTokenGenerator.class); &nbsp; &nbsp; &nbsp; &nbsp;  } &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Assert.notNull(jwtTokenGenerator, "jwtTokenGenerator is required"); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return new LoginAuthenticationSuccessHandler(jwtTokenGenerator); &nbsp; &nbsp;  } &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;public final &lt;T&gt; T getBeanOrNull(ApplicationContext applicationContext, Class&lt;T&gt; beanType) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;String[] beanNames = applicationContext.getBeanNamesForType(beanType); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (beanNames.length == 1) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return applicationContext.getBean(beanNames[0], beanType); &nbsp; &nbsp; &nbsp; &nbsp;  } &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return null; &nbsp; &nbsp;  }</code></pre> <h3 id="使用方法">使用方法</h3> <p>自行使用Maven命令<code>mvn install</code>到本地仓库，然后引入：</p> <pre><code class="language-xml">        &lt;dependency&gt;             &lt;groupId&gt;cn.felord&lt;/groupId&gt;             &lt;artifactId&gt;spring-security-extension&lt;/artifactId&gt;             &lt;version&gt;1.0.0&lt;/version&gt;         &lt;/dependency&gt;</code></pre> <p>然后参考样例<strong>sample</strong>项目进行开发，登录方式有三种。</p> <h3 id="普通登录">普通登录</h3> <blockquote> <p>原生Spring Security接口</p> </blockquote> <pre><code class="language-http"> POST /login?username=user&amp;password=12345 HTTP/1.1 Host: localhost:8080</code></pre> <h3 id="验证码登录">验证码登录</h3> <blockquote> <p>需要先实现必须的配置接口</p> </blockquote> <p>发送验证码后调用验证码登录接口：</p> <pre><code class="language-http"> POST /login/captcha?phone=11111111111&amp;captcha=123123 HTTP/1.1 Host: localhost:8080</code></pre> <h3 id="小程序登录">小程序登录</h3> <blockquote> <p>需要先实现必须的配置接口</p> </blockquote> <p>前端先调用微信授权登录接口获取<code>openid</code>:</p> <pre><code class="language-http"> POST /miniapp/preauth?clientId=wxxda23234&amp;jsCode=051A23234ZHa1tZ5yj3AOlFr HTTP/1.1 Host: localhost:8080</code></pre> <p>响应：</p> <pre><code class="language-json">{     "code": 200,     "data": {         "errcode": null,         "errmsg": null,         "sessionKey": null,         "openid": "oWmZj5QBrZxxxxx8OUxRrZJi4",         "unionid": "oS-dxxxxxx4w_x7dA-h9MIuA"     },     "msg": "",     "identifier": true }</code></pre> <p>然后调用小程序登录接口：</p> <pre><code class="language-http">POST /login/miniapp HTTP/1.1 Host: localhost:8080 Content-Type: application/json  {     "clientId": "wxd14qr6",     "openId": "oWmZj5QBrZIBks0xx8OUxRrZJi4",     "unionId": "oS-dK520tgW8xxxx7dA-h9MIuA",     "iv":"LQUOt8BSTa7xxxpe1Q==",     "encryptedData": "10hn3o4xxxxxrO/Ag5nRD3QkLSzduKnWuzN9B/H4Y0G5mDPR8siA7T8yaaqZsrMycLAoe2qrd1J75yYetYuWifiq3jUrcceRZHVxxl9LnQdW8f5+pMTnQtCYiMJ7Jm9paCw2Bh+5Lowkyqkx1q0fALvCQ9LXPPLAbLOB9CavRfKoenAmyyHQjZ/6lz0njzA==" }</code></pre> <h3 id="获取方式">获取方式</h3> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://gitee.com/felord/spring-security-login-extension"  target="_blank" rel="nofollow">Gitee: felord/spring-security-login-extension</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-91840.htm">动物医院简介怎么写（动物医院简介百度文库）</a></p>
+                                        <p>下一个：<a href="/news/article-92559.htm">宠物美容师有前景吗女生（宠物美容师好不好做）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-82389.htm" title="猫瘟疫苗多少钱一支猫（猫瘟疫苗多少钱一支猫用）">猫瘟疫苗多少钱一支猫（猫瘟疫苗多少钱一支猫用）</a></li>
+                        <li class="py-2"><a href="/news/article-83112.htm" title="领养宠物协议有法律效力吗怎么写（领养宠物协议有法律效力吗怎么写的）">领养宠物协议有法律效力吗怎么写（领养宠物协议有法律效力吗怎么写的）</a></li>
+                        <li class="py-2"><a href="/news/article-69971.htm" title="Spring Boot 分层构建 Docker 镜像实战">Spring Boot 分层构建 Docker 镜像实战</a></li>
+                        <li class="py-2"><a href="/news/article-85978.htm" title="拿货最便宜的批发软件尾货（批发拿货什么软件便宜?）">拿货最便宜的批发软件尾货（批发拿货什么软件便宜?）</a></li>
+                        <li class="py-2"><a href="/news/article-91840.htm" title="动物医院简介怎么写（动物医院简介百度文库）">动物医院简介怎么写（动物医院简介百度文库）</a></li>
+                        <li class="py-2"><a href="/news/article-88131.htm" title="宠物领养活动名字（宠物领养标语）">宠物领养活动名字（宠物领养标语）</a></li>
+                        <li class="py-2"><a href="/news/article-91839.htm" title="宠物批发货源在哪里找（宠物批发渠道）">宠物批发货源在哪里找（宠物批发渠道）</a></li>
+                        <li class="py-2"><a href="/news/article-90350.htm" title="动物疫苗新法案例分析题 动物疫苗新法案例分析题及答案">动物疫苗新法案例分析题 动物疫苗新法案例分析题及答案</a></li>
+                        <li class="py-2"><a href="/news/article-86686.htm" title="Python：数组添加数据和删除数据">Python：数组添加数据和删除数据</a></li>
+                        <li class="py-2"><a href="/news/article-74187.htm" title="Vue前端js循环遍历数组八种方法总结最新">Vue前端js循环遍历数组八种方法总结最新</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
