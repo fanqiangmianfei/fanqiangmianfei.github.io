@@ -1,4 +1,4 @@
-# VPN翻墙免费 | 4月10日20.1M/S|免费V2ray/Clash/Shadowrocket/SSR订阅节点分享  更新时间 2025-04-10 08:36:28
+# VPN翻墙免费 | 4月14日19.4M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享  更新时间 2025-04-14 08:24:46
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://fanqiangmianfei.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://fanqiangmianfei.github.io/uploads/2025/04/0-20250410.yaml
-- https://fanqiangmianfei.github.io/uploads/2025/04/1-20250410.yaml
-- https://fanqiangmianfei.github.io/uploads/2025/04/2-20250410.yaml
-- https://fanqiangmianfei.github.io/uploads/2025/04/3-20250410.yaml
-- https://fanqiangmianfei.github.io/uploads/2025/04/4-20250410.yaml
+- https://fanqiangmianfei.github.io/uploads/2025/04/0-20250414.yaml
+- https://fanqiangmianfei.github.io/uploads/2025/04/1-20250414.yaml
+- https://fanqiangmianfei.github.io/uploads/2025/04/2-20250414.yaml
+- https://fanqiangmianfei.github.io/uploads/2025/04/3-20250414.yaml
+- https://fanqiangmianfei.github.io/uploads/2025/04/4-20250414.yaml
 
 ### V2ray订阅链接
 
-- https://fanqiangmianfei.github.io/uploads/2025/04/0-20250410.txt
-- https://fanqiangmianfei.github.io/uploads/2025/04/1-20250410.txt
-- https://fanqiangmianfei.github.io/uploads/2025/04/2-20250410.txt
-- https://fanqiangmianfei.github.io/uploads/2025/04/3-20250410.txt
-- https://fanqiangmianfei.github.io/uploads/2025/04/4-20250410.txt
+- https://fanqiangmianfei.github.io/uploads/2025/04/0-20250414.txt
+- https://fanqiangmianfei.github.io/uploads/2025/04/1-20250414.txt
+- https://fanqiangmianfei.github.io/uploads/2025/04/2-20250414.txt
+- https://fanqiangmianfei.github.io/uploads/2025/04/3-20250414.txt
+- https://fanqiangmianfei.github.io/uploads/2025/04/4-20250414.txt
 
 ### Sing-box订阅链接
 
-- https://fanqiangmianfei.github.io/uploads/2025/04/20250410.json
+- https://fanqiangmianfei.github.io/uploads/2025/04/20250414.json
 
 ## 更多clash节点订阅 ：
 
