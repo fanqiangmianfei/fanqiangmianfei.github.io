@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-101405.htm" />
+    <title>mysql5.7版本的窗口函数实现</title>
+        <meta name="description" content="因为mysql5.7没有窗口函数，但是实际上还需要实现该功能，这边将两个进行比较对比实现。 -- 一、窗口函数处理 select   ROW_NUMBER OVER(PARTITION BY  QYM" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-101405.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="mysql5.7版本的窗口函数实现" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/53b6590d05d18407878a16bfa786f910.webp" />
+        <meta property="og:release_date" content="2025-04-22T08:23:02" />
+    <meta property="og:updated_time" content="2025-04-22T08:23:02" />
+        <meta property="og:description" content="因为mysql5.7没有窗口函数，但是实际上还需要实现该功能，这边将两个进行比较对比实现。 -- 一、窗口函数处理 select   ROW_NUMBER OVER(PARTITION BY  QYM" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="mysql5.7版本的窗口函数实现">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>mysql5.7版本的窗口函数实现</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>因为mysql5.7没有窗口函数，但是实际上还需要实现该功能，这边将两个进行比较对比实现。</p> <pre><code class="prism language-sql"><span class="token comment">-- 一、窗口函数处理</span> <span class="token keyword">select</span>   ROW_NUMBER <span class="token keyword">OVER</span><span class="token punctuation">(</span><span class="token keyword">PARTITION</span> <span class="token keyword">BY</span>  QYMC<span class="token punctuation">,</span>JCSJ<span class="token punctuation">,</span>PKMC  <span class="token keyword">ORDER</span> <span class="token keyword">BY</span> YZMC<span class="token punctuation">)</span>  <span class="token keyword">as</span> row_cnt <span class="token punctuation">,</span>QYMC<span class="token punctuation">,</span>JCSJ<span class="token punctuation">,</span>PKMC<span class="token punctuation">,</span>JCZ<span class="token punctuation">,</span>WRWPFL <span class="token keyword">from</span>   t_sjzx_wryzxjc_fs_rsj <span class="token keyword">where</span>   PKMC <span class="token operator">NOT</span> <span class="token operator">LIKE</span> <span class="token string">'%进口%'</span> <span class="token punctuation">;</span>   <span class="token comment">-- 二、若没有窗口函数，利用其它方式实现ROW_NUMBER OVER()</span> <span class="token keyword">select</span>   <span class="token comment">-- 注意这个计数项一定要放在变量设置之前，若出现和初始设置不一致才会出现1，否则就自增</span> <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token variable">@QYMC</span><span class="token operator">=</span>a<span class="token punctuation">.</span>QYMC  <span class="token operator">and</span> <span class="token variable">@PKMC</span> <span class="token operator">=</span> a<span class="token punctuation">.</span>PKMC <span class="token operator">and</span>  <span class="token variable">@JCSJ</span><span class="token operator">=</span>a<span class="token punctuation">.</span>JCSJ <span class="token punctuation">,</span>  <span class="token variable">@curRank</span> :<span class="token operator">=</span> <span class="token variable">@curRank</span> <span class="token operator">+</span><span class="token number">1</span> <span class="token punctuation">,</span><span class="token variable">@curRank</span> :<span class="token operator">=</span> <span class="token number">1</span>  <span class="token punctuation">)</span>  <span class="token keyword">as</span> row_cnt <span class="token punctuation">,</span><span class="token variable">@QYMC</span> :<span class="token operator">=</span> a<span class="token punctuation">.</span>QYMC <span class="token punctuation">,</span><span class="token variable">@JCSJ</span> :<span class="token operator">=</span> a<span class="token punctuation">.</span>JCSJ <span class="token punctuation">,</span><span class="token variable">@PKMC</span> :<span class="token operator">=</span> a<span class="token punctuation">.</span>PKMC <span class="token punctuation">,</span>a<span class="token punctuation">.</span>JCZ <span class="token punctuation">,</span>a<span class="token punctuation">.</span>WRWPFL <span class="token keyword">from</span>  <span class="token comment">-- 原“PARTITION BY  QYMC,JCSJ,PKMC  ORDER BY YZMC”，需要在这里将所有进行 order by  进行排序</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token operator">*</span>   <span class="token keyword">from</span>  t_sjzx_wryzxjc_fs_rsj   <span class="token keyword">WHERE</span>  PKMC <span class="token operator">NOT</span> <span class="token operator">LIKE</span> <span class="token string">'%进口%'</span>  <span class="token keyword">ORDER</span> <span class="token keyword">BY</span>  QYMC<span class="token punctuation">,</span>JCSJ<span class="token punctuation">,</span>PKMC<span class="token punctuation">,</span>YZMC <span class="token punctuation">)</span> a<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">select</span>  <span class="token variable">@QYMC</span> :<span class="token operator">=</span> <span class="token boolean">null</span><span class="token punctuation">,</span><span class="token variable">@PKMC</span> :<span class="token operator">=</span> <span class="token boolean">null</span><span class="token punctuation">,</span><span class="token variable">@JCSJ</span> :<span class="token operator">=</span> <span class="token boolean">null</span><span class="token punctuation">,</span><span class="token variable">@curRank</span> :<span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> t_temp<span class="token punctuation">;</span>  </code></pre> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-101403.htm">springboot中使用restemplate，请求接口会将url参数的%编码为%25问题解决</a></p>
+                                        <p>下一个：<a href="/news/article-102198.htm">Spring Boot Web项目ConcurrentLinkedQueue+ReentrantLock+Condition实现消费者功能(类似MQ队列)</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-92559.htm" title="宠物美容师有前景吗女生（宠物美容师好不好做）">宠物美容师有前景吗女生（宠物美容师好不好做）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-node-share.htm" title="VPN翻墙免费 | 3月8日20.9M/S|免费SSR/Shadowrocket/V2ray/Clash订阅节点分享">VPN翻墙免费 | 3月8日20.9M/S|免费SSR/Shadowrocket/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-89582.htm" title="UVM如何处理out-of-order乱序传输">UVM如何处理out-of-order乱序传输</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-v2ray-subscribe.htm" title="VPN翻墙免费 | 3月31日19M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点分享">VPN翻墙免费 | 3月31日19M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-72202.htm" title="如何给动物注射（怎么给动物注射药物）">如何给动物注射（怎么给动物注射药物）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-free-node-subscribe.htm" title="VPN翻墙免费 | 3月14日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享">VPN翻墙免费 | 3月14日19.9M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-clash-v2ray-ss-ssr.htm" title="VPN翻墙免费 | 3月15日19.2M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享">VPN翻墙免费 | 3月15日19.2M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-88130.htm" title="动物医院监管部门电话（动物医院工作时间）">动物医院监管部门电话（动物医院工作时间）</a></li>
+                        <li class="py-2"><a href="/news/article-80299.htm" title="Android 弹窗设计规范">Android 弹窗设计规范</a></li>
+                        <li class="py-2"><a href="/news/article-102200.htm" title="mysql 锁 读锁 写锁 共享锁 排它锁 表锁 行锁 悲观锁 乐观锁">mysql 锁 读锁 写锁 共享锁 排它锁 表锁 行锁 悲观锁 乐观锁</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">67</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-101403.htm" />
+    <title>springboot中使用restemplate，请求接口会将url参数的%编码为%25问题解决</title>
+        <meta name="description" content="在开发过程中，通过resttemplate调接口，然后发现url中参数会将%编码为%25，导致接收方接收到的参数值改变  ResponseEntity&lt;String&gt; entity = r" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-101403.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="springboot中使用restemplate，请求接口会将url参数的%编码为%25问题解决" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/36749d9a49d97b688b5017abac5b10bb.webp" />
+        <meta property="og:release_date" content="2025-04-22T08:23:02" />
+    <meta property="og:updated_time" content="2025-04-22T08:23:02" />
+        <meta property="og:description" content="在开发过程中，通过resttemplate调接口，然后发现url中参数会将%编码为%25，导致接收方接收到的参数值改变  ResponseEntity&lt;String&gt; entity = r" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot中使用restemplate，请求接口会将url参数的%编码为%25问题解决">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>springboot中使用restemplate，请求接口会将url参数的%编码为%25问题解决</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> </h1> <p>在开发过程中，通过resttemplate调接口，然后发现url中参数会将%编码为%25，导致接收方接收到的参数值改变</p> </h1> <pre><code class="prism language-java"><span class="token class-name">ResponseEntity</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> entity <span class="token operator">=</span> restTemplate<span class="token punctuation">.</span><span class="token function">postForEntity</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> request<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <p>url中拼接了参数，如</p> <pre><code class="prism language-java">sign <span class="token operator">=</span> gshq2<span class="token operator">%</span><span class="token number">2</span>BjmBizK<span class="token operator">%</span><span class="token number">2</span>Bq0Ugec<span class="token operator">%</span><span class="token number">2</span>BYnmVH5V<span class="token operator">%</span><span class="token number">2F</span>XRUHG6ivYgCqdSC09jpdV<span class="token operator">%</span><span class="token number">2F</span>F41pA5R1xUqwkWCGan8YWj<span class="token operator">%</span><span class="token number">2F</span>na419fslb0WIC0NAu6XCIakq7Rq </code></pre> <p>接收方接收到的参数为</p> <pre><code class="prism language-java">sign <span class="token operator">=</span> gshq2<span class="token operator">%</span><span class="token number">252</span>BjmBizK<span class="token operator">%</span><span class="token number">252</span>Bq0Ugec<span class="token operator">%</span><span class="token number">252</span>BYnmVH5V<span class="token operator">%</span><span class="token number">252F</span>XRUHG6ivYgCqdSC09jpdV<span class="token operator">%</span><span class="token number">252F</span>F41pA5R1xUqwkWCGan8YWj<span class="token operator">%</span><span class="token number">252F</span>na419fslb0WIC0NAu6XCIakq7Rq </code></pre> <p>经过这两个参数对比分析，我们可以发现，url参数中的%被编码成了%25</p> </h1> <p>一、将参数放到post请求体<br /> 我们不再使用参数放在url上传递，而是改为使用请求体的方式传递，就可以避免这个问题产生</p> <p>二、自己封装URI<br /> 将以上代码改为这样，就可以正常了。</p> <pre><code class="prism language-java"><span class="token class-name">URI</span> uriObj <span class="token operator">=</span> URI<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>url <span class="token operator">+</span> myparams <span class="token operator">+</span> signUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>             entity <span class="token operator">=</span> restTemplate<span class="token punctuation">.</span><span class="token function">postForEntity</span><span class="token punctuation">(</span>uriObj <span class="token punctuation">,</span> request<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-100749.htm">1970年农历四月二十七是几号生日呢（1970年农历四月二十七是几号生日呢女）</a></p>
+                                        <p>下一个：<a href="/news/article-101405.htm">mysql5.7版本的窗口函数实现</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-100747.htm" title="LevelDB 学习笔记5：版本控制_在线工具">LevelDB 学习笔记5：版本控制_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-88130.htm" title="动物医院监管部门电话（动物医院工作时间）">动物医院监管部门电话（动物医院工作时间）</a></li>
+                        <li class="py-2"><a href="/news/article-84539.htm" title="三国杀武将展示图（三国杀武将展示图高清）">三国杀武将展示图（三国杀武将展示图高清）</a></li>
+                        <li class="py-2"><a href="/news/article-88131.htm" title="宠物领养活动名字（宠物领养标语）">宠物领养活动名字（宠物领养标语）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-free-node-subscribe.htm" title="VPN翻墙免费 | 3月9日22.1M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享">VPN翻墙免费 | 3月9日22.1M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-node-share.htm" title="VPN翻墙免费 | 4月4日18.1M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享">VPN翻墙免费 | 4月4日18.1M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-76206.htm" title="宠物疫苗妙三多（宠物疫苗妙三多猫三联那个好）">宠物疫苗妙三多（宠物疫苗妙三多猫三联那个好）</a></li>
+                        <li class="py-2"><a href="/news/article-93309.htm" title="宠物粮食品牌前十名排名图片及价格（宠物粮种类）">宠物粮食品牌前十名排名图片及价格（宠物粮种类）</a></li>
+                        <li class="py-2"><a href="/news/article-70874.htm" title="天津市天宠宠物医院（天津宠物医院收费价目表）">天津市天宠宠物医院（天津宠物医院收费价目表）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-free-v2ray-subscribe.htm" title="VPN翻墙免费 | 3月21日19.4M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">VPN翻墙免费 | 3月21日19.4M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">67</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
