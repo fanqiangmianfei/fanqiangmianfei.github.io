@@ -4,6 +4,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+#xcblog-blog-defined  .xcblog-blog-detail p {font-size: 1.5rem;line-height: 2.2rem;}
+#xcblog-blog-defined  .xcblog-blog-detail h2 {font-size: 2.5rem;}
+#xcblog-blog-defined  .xcblog-blog-detail h3 {font-size: 2rem;}
 body{
 	background:#fff;
 	font-family: 'Oswald', sans-serif;
@@ -1397,3 +1400,4 @@ ul.social {
 	padding: 0.5em 0;
 }
 }
+

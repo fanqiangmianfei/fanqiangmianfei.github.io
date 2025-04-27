@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-103761.htm" />
+    <title>Java日期与时间 LocalDate、LocalDateTime函数</title>
+        <meta name="description" content="java.util.Date 是从 JDK 1.0 开始提供，易用性差  默认是中欧时区(Central Europe Time) 起始年份是 1900 年 起始月份从 0 开始 对象创建之后可修改 " />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-103761.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="Java日期与时间 LocalDate、LocalDateTime函数" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/0dca47b06cb3adc15b43464dec079a65.webp" />
+        <meta property="og:release_date" content="2025-04-25T07:07:59" />
+    <meta property="og:updated_time" content="2025-04-25T07:07:59" />
+        <meta property="og:description" content="java.util.Date 是从 JDK 1.0 开始提供，易用性差  默认是中欧时区(Central Europe Time) 起始年份是 1900 年 起始月份从 0 开始 对象创建之后可修改 " />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Java日期与时间 LocalDate、LocalDateTime函数">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>Java日期与时间 LocalDate、LocalDateTime函数</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="news" id="xcblog-blog-defined">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>java.util.Date 是从 JDK 1.0 开始提供，易用性差</p> <ul> <li>默认是中欧时区(Central Europe Time)</li> <li>起始年份是 1900 年</li> <li>起始月份从 0 开始</li> <li>对象创建之后可修改</li> </ul> <p> JDK 1.1 废弃了 Date 中很多方法，新增了并建议使用 java.util.Calendar 类</p> <ul> <li>相比 Date 去掉了年份从 1900 年开始</li> <li>月份依然从 0 开始</li> <li>选用 Date 或 Calendar，让人更困扰</li> <li>DateFormat 格式化时间，线程不安全</li> </ul> <p> 为了解决 JDK 中时间与日期较难使用的问题，JDK 1.8 开始，吸收了 Joda-Time 很多功能，新增 java.time 包，加了新特性：</p> <ul> <li>区分适合人阅读的和适合机器计算的时间与日期类</li> <li>日期、时间及对比相关的对象创建完均不可修改</li> <li>可并发解析与格式化日期与时间</li> <li>支持设置不同的时区与历法</li> </ul> <p>LocalDate&nbsp;&nbsp; &nbsp;本地日期<br /> LocalTime&nbsp;&nbsp; &nbsp;本地时间<br /> LocalDateTime&nbsp;&nbsp; &nbsp;本地日期+时间<br /> Instant&nbsp;&nbsp; &nbsp;时间戳，适合机器时间计算<br /> Duration&nbsp;&nbsp; &nbsp;时间差<br /> Period&nbsp;&nbsp; &nbsp;年、月、日差<br /> ZoneOffset&nbsp;&nbsp; &nbsp;时区偏移量<br /> ZonedDateTime&nbsp;&nbsp; &nbsp;带时区的日期时间<br /> Clock&nbsp;&nbsp; &nbsp;时钟，获取其他地区时钟<br /> DateTimeFormatter&nbsp;&nbsp; &nbsp;时间格式化<br /> Temporal&nbsp;&nbsp; &nbsp;日期-时间获取值的字段<br /> TemporalAdjuster&nbsp;&nbsp; &nbsp;emporal 对象转换，实现自定义<br /> ChronoLocalDate&nbsp;&nbsp; &nbsp;日历系统接口</p> </h1> <p>获取当前日期<br /> LocalDate.now()</p> <p> 创建日期<br /> LocalDate date = LocalDate.of(2020, 9, 21)</p> <p> 获取年份<br /> date.getYear()</p> <p>//通过 TemporalField 接口的实现枚举类 ChronoField.YEAR 获取年份<br /> date.get(ChronoField.YEAR)</p> <p> 获取月份<br /> date.getMonth().getValue()</p> <p>//通过 TemporalField 接口的实现枚举类 ChronoField.MONTH_OF_YEAR 获取月份<br /> date.get(ChronoField.MONTH_OF_YEAR)</p> <p> 获取日<br /> date.getDayOfMonth()</p> <p>//通过 TemporalField 接口的实现枚举类 ChronoField.DAY_OF_MONTH 获取日<br /> date.get(ChronoField.DAY_OF_MONTH)</p> <p> 获取周几<br /> date.getDayOfWeek()</p> <p> 获取当前月多少天<br /> date.lengthOfMonth()</p> <p> 获取当前年是否为闰年<br /> date.isLeapYear()</p> <p> 当前时间<br /> LocalTime nowTime = LocalTime.now()</p> <p> 10、创建时间</p> <p>LocalTime.of(23, 59, 59)</p> <p> 11、获取时</p> <p>nowTime.getHour()</p> <p> 12、获取分</p> <p>nowTime.getMinute()</p> <p> 13、获取秒</p> <p>nowTime.getSecond()</p> <p> 14、获取毫秒</p> <p>nowTime.getLong(ChronoField.MILLI_OF_SECOND)</p> <p> 15、获取纳秒</p> <p>nowTime.getNano()</p> <p> 16、创建日期时间对象</p> <p>LocalDateTime.of(2020, 9, 21, 1, 2, 3);<br /> LocalDateTime.of(date, nowTime);</p> <p> 17、获取当前日期时间对象</p> <p>LocalDateTime.now()</p> <p> 18、通过 LocalDate 创建日期时间对象</p> <p>date.atTime(1, 2, 3)</p> <p> 19、通过 LocalTime 创建日期时间对象</p> <p>nowTime.atDate(date)</p> <p> 20、通过 LocalDateTime 获取 LocalDate 对象</p> <p>LocalDateTime.now().toLocalDate()</p> <p> 21、通过 LocalDateTime 获取 LocalTime 对象</p> <p>LocalDateTime.now().toLocalTime()</p> <p> 22、解析日期字符串</p> <p>LocalDate.parse("2020-09-21")</p> <p> 23、解析时间字符串</p> <p>LocalTime.parse("01:02:03")</p> <p> 24、解析日期时间字符串</p> <p>LocalDateTime.parse("2020-09-21T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME)</p> <p> 25、方便时间建模、机器处理的时间处理类 Instant，起始时间 1970-01-01 00:00:00</p> <p>//起始时间 + 3 秒<br /> Instant.ofEpochSecond(3)<br /> //起始时间 + 3 秒 + 100 万纳秒<br /> Instant.ofEpochSecond(3, 1_000_000_000)<br /> //起始时间 + 3 秒 - 100 万纳秒<br /> Instant.ofEpochSecond(3, -1_000_000_000))<br /> //距离 1970-01-01 00:00:00 毫秒数<br /> Instant.now().toEpochMilli()</p> <p> 26、Duration：LocalTime、LocalDateTime、Intant 的时间差处理</p> <p>Duration.between(LocalTime.parse("01:02:03"), LocalTime.parse("02:03:04"))<br /> Duration.between(LocalDateTime.parse("2020-09-21T01:02:03"), LocalDateTime.parse("2020-09-22T02:03:04"))<br /> Duration.between(Instant.ofEpochMilli(1600623455080L), Instant.now())</p> <p> 27、日期时间，前、后、相等比较</p> <p>//2020-09-21 在 2020-09-18 前？<br /> LocalDate.parse("2020-09-21").isBefore(LocalDate.parse("2020-09-18"))<br /> //01:02:03 在 02:03:04 后？<br /> LocalTime.parse("01:02:03").isAfter(LocalTime.parse("02:03:04"))</p> <p> 28、修改日期、时间对象，返回副本</p> <p>//修改日期返回副本<br /> LocalDate.now().withYear(2019).withMonth(9).withDayOfMonth(9)<br /> LocalDate date4Cal = LocalDate.now();<br /> //加一周<br /> date4Cal.plusWeeks(1)<br /> //减两个月<br /> date4Cal.minusMonths(2)<br /> //减三年<br /> date4Cal.minusYears(3)</p> <p> 29、格式化</p> <p>//格式化当前日期<br /> LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE)<br /> //指定格式，格式化当前日期<br /> LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"))<br /> 指定格式，格式化当前日期时间<br /> //格式化当前日期时间<br /> LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd &nbsp;HH:mm:ss"))</p> <p> 30、解析</p> <p>//日期解析<br /> LocalDate.parse("2020-09-20")<br /> //指定格式，日期解析<br /> LocalDate.parse("2020/09/20", DateTimeFormatter.ofPattern("yyyy/MM/dd"))<br /> //指定格式，日期时间解析<br /> LocalDateTime.parse("2020/09/20 01:01:03", DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"))</p> <p> 31、时区</p> <p>//上海时区<br /> ZoneId shanghaiZone = ZoneId.of("Asia/Shanghai");<br /> //设置日期为上海时区<br /> LocalDate.now().atStartOfDay(shanghaiZone)<br /> //设置日期时间为上海时区<br /> LocalDateTime.now().atZone(shanghaiZone)<br /> //设置 Instant 为上海时区<br /> Instant.now().atZone(shanghaiZone)</p> <p> 32、子午线时间差</p> <p>//时间差减 1 小时<br /> ZoneOffset offset = ZoneOffset.of("-01:00");<br /> //设置时间差<br /> OffsetDateTime.of(LocalDateTime.now(), offset</p> </h1> <p>java.time.DayOfWeek的getDisplayName()方法是Java中的一个内置函数，它根据指定的Locale类参数和TextStyle返回day-of-week的文本表示形式。 TextStyle定义了三个元素“ FULL”，“ SHORT”和“ NARROW”。语言环境类别代表世界上特定的语言和地区。</p> <p><strong>方法声明：</strong></p> <pre> public String getDisplayName(TextStyle style, Locale locale)</pre> <p><strong>用法:</strong></p> <pre> String text = dayOfWeekObject.getDisplayName(TextStyle style, Locale locale)</pre> <p><strong>参数：</strong>此方法有两个参数：</p> <ul> <li><em>style</em>–是TestStyle，可以包含三个元素“ FULL”，“ SHORT”和“ NARROW”。</li> <li><em>locale</em>–代表世界上特定的语言和地区。默认语言环境是US</li> <li><em>dayOfWeekObject</em>–是DayOfWeek的实例。</li> </ul> <p><strong>返回值：</strong>该函数返回根据指定的Locale类参数和TextStyle返回day-of-week的文本表示形式。</p> <p>以下示例程序旨在说明上述方法：</p> <pre><code>// Java Program Demonstrate getDisplayName()  // method of DayOfWeek     import java.time.*;  import java.time.format.TextStyle;  import java.util.Locale;     class DayOfWeekExample {      public static void main(String[] args)      {          // Initializing a DayOfWeek instance          DayOfWeek dayOfWeek = DayOfWeek.MONDAY;             // Get textual representation of the          // day-of-week in FULL style          String full_name              = dayOfWeek                    .getDisplayName(TextStyle.FULL,                                    Locale.getDefault());             // Get textual representation of the          // day-of-week in SHORT style          String short_name              = dayOfWeek                    .getDisplayName(TextStyle.SHORT,                                    Locale.getDefault());             // Get textual representation of the          // day-of-week in NARROW style          String narrow_name              = dayOfWeek                    .getDisplayName(TextStyle.NARROW,                                    Locale.getDefault());             // Printing the textual names of the day-of-week          System.out.println(full_name);             System.out.println(short_name);             System.out.println(narrow_name);      }  }</code></pre> <p>输出</p> <pre><code>Monday Mon M</code></pre> <pre><code>// Java Program Demonstrate getDisplayName()  // method of DayOfWeek     import java.time.*;  import java.time.DayOfWeek;  import java.time.format.TextStyle;  import java.util.Locale;     class DayOfWeekExample {      public static void main(String[] args)      {          // Initializing a DayOfWeek instance          DayOfWeek dayOfWeek = DayOfWeek.WEDNESDAY;             // Get textual representation of the          // day-of-week in FULL style          String full_name              = dayOfWeek                    .getDisplayName(TextStyle.FULL,                                    Locale.getDefault());             // Get textual representation of the          // day-of-week in SHORT style          String short_name              = dayOfWeek                    .getDisplayName(TextStyle.SHORT,                                    Locale.getDefault());             // Get textual representation of the          // day-of-week in NARROW style          String narrow_name              = dayOfWeek                    .getDisplayName(TextStyle.NARROW,                                    Locale.getDefault());             // Printing the textual names of the day-of-week          System.out.println(full_name);             System.out.println(short_name);             System.out.println(narrow_name);      }  }</code></pre> <p>输出</p> <pre><code>Wednesday Wed W</code></pre> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-103000.htm">动物医院电话号码多少啊怎么查询（动物医院的电话号码是多少）</a></p>
+                                        <p>下一个：<a href="/news/article-103764.htm">上海宠物医院哪家好又便宜（上海 好的宠物医院）</a></p>
+                                    </div>
+                                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-72203.htm" title="天津宠物寄养多少钱一天（天津宠物寄养服务价格）">天津宠物寄养多少钱一天（天津宠物寄养服务价格）</a></li>
+                        <li class="py-2"><a href="/news/article-70243.htm" title="动物医院科室分类 动物医院科室分类标准">动物医院科室分类 动物医院科室分类标准</a></li>
+                        <li class="py-2"><a href="/news/article-102997.htm" title="宠物领养app设计（宠物领养app该如何设计）">宠物领养app设计（宠物领养app该如何设计）</a></li>
+                        <li class="py-2"><a href="/news/article-69972.htm" title="适合新手开的店铺（新手开店适合开什么网店）">适合新手开的店铺（新手开店适合开什么网店）</a></li>
+                        <li class="py-2"><a href="/news/article-81695.htm" title="宠物用品批发进货渠道湖北地区有几个（湖北武汉宠物用品批发）">宠物用品批发进货渠道湖北地区有几个（湖北武汉宠物用品批发）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-free-node-subscribe-links.htm" title="VPN翻墙免费 | 3月17日19.1M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享">VPN翻墙免费 | 3月17日19.1M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-78927.htm" title="动物防疫可以打疫苗吗多少钱一针（动物防疫打针收费吗）">动物防疫可以打疫苗吗多少钱一针（动物防疫打针收费吗）</a></li>
+                        <li class="py-2"><a href="/news/article-100749.htm" title="1970年农历四月二十七是几号生日呢（1970年农历四月二十七是几号生日呢女）">1970年农历四月二十七是几号生日呢（1970年农历四月二十七是几号生日呢女）</a></li>
+                        <li class="py-2"><a href="/news/article-90350.htm" title="动物疫苗新法案例分析题 动物疫苗新法案例分析题及答案">动物疫苗新法案例分析题 动物疫苗新法案例分析题及答案</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-25-free-high-speed-nodes.htm" title="VPN翻墙免费 | 4月25日22M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">VPN翻墙免费 | 4月25日22M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
