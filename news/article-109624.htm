@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://fanqiangmianfei.github.io/news/article-109624.htm" />
+    <title>Tkinter实现一个窗口的菜单栏</title>
+        <meta name="description" content="有时要在窗口上添加一个菜单栏，一般不会想到用python来实现它，今天小编就给大家带来用python实现一个窗口的菜单栏，而且，在菜单栏类还可以添加一些功能，一起来看看吧。  第一步:首先需要利用Tk" />
+        <link rel="icon" href="/assets/website/img/clashmetanode/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="翻墙免费 VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://fanqiangmianfei.github.io/news/article-109624.htm" />
+    <meta property="og:site_name" content="翻墙免费 VPN免费节点订阅官网" />
+    <meta property="og:title" content="Tkinter实现一个窗口的菜单栏" />
+    <meta property="og:image" content="https://fanqiangmianfei.github.io/uploads/20240413/bf6814bbeca8411778ffa729565bd614.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:22:54" />
+    <meta property="og:updated_time" content="2025-05-02T09:22:54" />
+        <meta property="og:description" content="有时要在窗口上添加一个菜单栏，一般不会想到用python来实现它，今天小编就给大家带来用python实现一个窗口的菜单栏，而且，在菜单栏类还可以添加一些功能，一起来看看吧。  第一步:首先需要利用Tk" />
+        
+    <link href="/assets/website/css/clashmetanode/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--theme-style-->
+    <link href="/assets/website/css/clashmetanode/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <link href="/assets/website/css/clashmetanode/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Tkinter实现一个窗口的菜单栏">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+
+    <!-- script -->
+    <script src="/assets/website/js/frontend/clashmetanode/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/move-top.js"></script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/easing.js"></script>
+    <link type="text/css" rel="stylesheet" href="/assets/website/css/clashmetanode/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('div.description').each(function() {
+            $(this).css('display', 'block');
+        });
+
+        $('div.content-top-grid').hover(function() {
+            $(this).children('.description').stop().fadeTo(500, 1);
+        }, function() {
+            $(this).children('.description').stop().fadeTo(500, 0);
+        });
+
+    });
+    </script>
+    <script type="text/javascript" src="/assets/website/js/frontend/clashmetanode/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+    //	The menu on the left
+    $(function() {
+        $('nav#menu-left').mmenu();
+    });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BKNKQRESX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BKNKQRESX2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <!--header-->
+    <div class="header">
+        <a class="navicon" href="#menu-left"> </a>
+        <div class="container">
+            <div class="header-matter">
+                <h1>Tkinter实现一个窗口的菜单栏</h1>
+                <p>
+                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                </p>
+            </div>
+        </div>
+                <nav id="menu-left">
+            <ul>
+                                <li><a href="/">首页</a></li>
+                                <li><a href="/free-nodes/">免费节点</a></li>
+                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                <li><a href="/news/">新闻资讯</a></li>
+                                <li><a href="/client.htm">客户端</a></li>
+                            </ul>
+        </nav>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+        </script>
+    </div>
+    <div class="clearfix"> </div>
+    <!--//header-->
+    <!--content-->
+    <div class="content">
+        <!--our-news-->
+        <div class="our-news" id="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="news" id="xcblog-blog-defined">
+                                            <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <div id="js_content"> </h1> <p>有时要在窗口上添加一个菜单栏，一般不会想到用python来实现它，今天小编就给大家带来用python实现一个窗口的菜单栏，而且，在菜单栏类还可以添加一些功能，一起来看看吧。</p> </h1> <p>第一步:首先需要利用Tkinter创建一个窗口；</p> <table> <tbody> <tr> <td style="vertical-align:top;"> <p>import&nbsp;tkinter&nbsp;as&nbsp;tk</p> <p>window=tk.Tk()</p> <p>window.title('my&nbsp;window')&nbsp;#窗口标题</p> <p>window.geometry('500x350+300+200')#窗口大小以及距离x轴与y轴的距离</p> <p>window.mainloop()#显示窗口</p> </td> </tr> </tbody> </table> <p>第二步:创建一个窗口菜单;</p> <table> <tbody> <tr> <td style="vertical-align:top;"> <p>num1=tk.Menu(menus)#在menus上面创建一个选项栏num1</p> <p>menus.add_cascade(label='Menu1',menu=num1)#将num1命名为Menu1</p> <p>num1.add_command(label='Open',command=cod)#在num1上增加一个Open命令，执行的cod</p> <p>num1.add_command(label='Exit',command=window.quit)#在num1上增加一个退出命令</p> <p>num2=tk.Menu(menus)#在menus上面创建一个选项num1</p> <p>menus.add_cascade(label='Menu2',menu=num2)#将num2命名为Menu1</p> <p>num2.add_command(label='Task',command=cod)#在num2上增加一个Task命令，执行cod</p> <p>num2.add_command(label='Exit',command=window.quit)#在num2上增加一个退出命令</p> <p>window.config(menu=menus)#将window的menu改为我们所定义的menus</p> </td> </tr> </tbody> </table> <p>第三步:创建执行的命令，当然这里为了方便，Task与Open命令均执行所定义的cod函数，主要是在Label中显示I hit menus这个命令，而另外两个都执行退出window的命令;</p> <table> <tbody> <tr> <td style="vertical-align:top;"> <p>l=tk.Label(window,text='',bg='yellow',width=20,font=('华文行楷',10))#定义好我们的label</p> <p>l.pack()</p> <p>var=tk.StringVar()</p> <p>def&nbsp;cod():</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;l.config(text='I&nbsp;hit&nbsp;menus')</p> </td> </tr> </tbody> </table> <p>代码汇总及效果展示</p> <table> <tbody> <tr> <td style="vertical-align:top;"> <p>import&nbsp;tkinter&nbsp;as&nbsp;tk</p> <p>window=tk.Tk()</p> <p>window.title('my&nbsp;window')</p> <p>window.geometry('500x350+300+200')#窗口大小以及距离x轴与y轴的距离</p> <p>l=tk.Label(window,text='',bg='yellow',width=20,font=('华文行楷',10))#定义好我们的label</p> <p>l.pack()</p> <p>var=tk.StringVar()</p> <p>def&nbsp;cod():</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;l.config(text='I&nbsp;hit&nbsp;menus')#将我们Label中的text改为I hit menus</p> <p>menus=tk.Menu(window)#在window上创建一个菜单栏menus</p> <p>num1=tk.Menu(menus)#在menus上面创建一个选项栏num1</p> <p>menus.add_cascade(label='Menu1',menu=num1)#将num1命名为Menu1</p> <p>num1.add_command(label='Open',command=cod)#在num1上增加一个Open命令，执行的cod</p> <p>num1.add_command(label='Exit',command=window.quit)#在num1上增加一个退出命令</p> <p>num2=tk.Menu(menus)#在menus上面创建一个选项num1</p> <p>menus.add_cascade(label='Menu2',menu=num2)#将num2命名为Menu1</p> <p>num2.add_command(label='Task',command=cod)#在num2上增加一个Task命令，执行cod</p> <p>num2.add_command(label='Exit',command=window.quit)#在num2上增加一个退出命令</p> <p>window.config(menu=menus)#将window的menu改为我们所定义的menus</p> <p>window.mainloop()#显示窗口</p> </td> </tr> </tbody> </table> <p>效果展示：</p> <p style="text-align:center;"><img decoding="async" alt="" src="http://img.555519.xyz/uploads/20230210/b45fb7403f595e55b9b2e34f6943de79.jpg"></p> </h1> <p>该博客主要讲解了如何用Tkinter来做一个菜单栏，易上手，易理解没有基础的读者看一看就能学会，也就能更好的运用Tkinter来做各种页面了；希望对读者能有所收获。</p> </div></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108767.htm">宠物粮食加工厂加盟费多少合适呢 宠物粮食加工厂加盟费多少合适呢知乎</a></p>
+                                        <p>下一个：<a href="/news/article-109626.htm">领养协议书模板图片大全（领养协议范本）</a></p>
+                                    </div>
+                                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    	<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-26-node-share-links.htm" title="VPN翻墙免费 | 4月26日23M/S|免费V2ray/Shadowrocket/Clash/SSR订阅节点分享">VPN翻墙免费 | 4月26日23M/S|免费V2ray/Shadowrocket/Clash/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-89582.htm" title="UVM如何处理out-of-order乱序传输">UVM如何处理out-of-order乱序传输</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-2-free-v2ray-subscribe.htm" title="VPN翻墙免费 | 4月2日22.6M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享">VPN翻墙免费 | 4月2日22.6M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-110462.htm" title="宠物领养协议需要身份证复印件吗有效吗（宠物领养协议是什么）">宠物领养协议需要身份证复印件吗有效吗（宠物领养协议是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-106215.htm" title="动物医院名字有创意两个字的吗英文翻译（动物医院 英文）">动物医院名字有创意两个字的吗英文翻译（动物医院 英文）</a></li>
+                        <li class="py-2"><a href="/news/article-94830.htm" title="中国动物疫苗十强名单最新图片（全国动物用疫苗销量排行）">中国动物疫苗十强名单最新图片（全国动物用疫苗销量排行）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-6-node-share.htm" title="VPN翻墙免费 | 4月6日18.2M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享">VPN翻墙免费 | 4月6日18.2M/S|免费Shadowrocket/SSR/Clash/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-93309.htm" title="宠物粮食品牌前十名排名图片及价格（宠物粮种类）">宠物粮食品牌前十名排名图片及价格（宠物粮种类）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-17-free-v2ray.htm" title="VPN翻墙免费 | 4月17日21.5M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享">VPN翻墙免费 | 4月17日21.5M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-88847.htm" title="动物疫苗厂家电话查询号码（动物疫苗批发）">动物疫苗厂家电话查询号码（动物疫苗批发）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">88</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//content-->
+        <!--footer-->
+    <div class="footer">
+        <div class="container">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                翻墙免费 VPN免费节点订阅官网 版权所有
+                <br />
+                Powered by WordPress
+            </p>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
